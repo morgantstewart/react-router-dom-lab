@@ -11,7 +11,6 @@ const App = () => {
   const addBox = (formData) => {
     setMailboxes(prevMailboxes => [...prevMailboxes, formData]);
   };
-
 };
 
 
