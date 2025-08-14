@@ -1,9 +1,13 @@
 import { useState } from 'react';
-import '/src/components/NavBar/NavBar.jsx';
-import '/src/components/MailboxForm/MailboxForm.jsx';
-import '/src/components/MailboxList/MailboxList.jsx';
-import '/src/components/MailboxDetails/MailboxDetails.jsx';
+import NavBar from './components/NavBar/NavBar.jsx'
+import MailboxForm from './components/MailboxForm/MailboxForm.jsx'
+import MailboxList from './components/MailboxList/MailboxList'
+import MailboxDetails from './components/MailboxDetails/MailboxDetails.jsx'
 import { Route, Routes } from 'react-router-dom';
+
+
+
+
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars
@@ -25,5 +29,12 @@ const App = () => {
     </>
   );
 };
+
+
+
+
+
+
+
 
 export default App;
