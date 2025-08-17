@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import NavBar from './components/NavBar/NavBar.jsx'
 import MailboxForm from './components/MailboxForm/MailboxForm.jsx'
-import MailboxList from './components/MailboxList/MailboxList'
+import MailboxList from './components/MailboxList/MailboxList.jsx'
 import MailboxDetails from './components/MailboxDetails/MailboxDetails.jsx'
 import { Route, Routes } from 'react-router-dom';
 
