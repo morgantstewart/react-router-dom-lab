@@ -13,18 +13,18 @@ const MailboxList = ({ mailboxes = [] }) => {
   return (
     <div>
       <h2>Mailboxes</h2>
-      <ul>
+      <div>
         {mailboxes.map((mailbox) => (
-          <li key={mailbox._id}>
+          <div key={mailbox._id} className="mail-box">
             <Link to={`/mailboxes/${mailbox._id}`}>
               Mailbox #{mailbox._id} - {mailbox.name || 'Unnamed Mailbox'}
             </Link>
             <div>
               <small>Owner: {mailbox.boxOwner || 'Unknown'} | Size: {mailbox.boxSize || 'Unknown'}</small>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
       <p><Link to="/new-mailbox">Add New Mailbox</Link></p>
     </div>
   );
