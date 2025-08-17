@@ -26,7 +26,7 @@ const App = () => {
     <>
       <NavBar />
       <Routes>
-        <Route path="/" element={<main><h1>Post Office</h1></main>} />
+        <Route path="/" element={<main></main>} />
         <Route path="/mailboxes" element={<MailboxList mailboxes={mailboxes} />} />
         <Route path="/new-mailbox" element={<MailboxForm onSubmit={addBox} />} />
         <Route path="/mailboxes/:mailboxId" element={<MailboxDetails mailboxes={mailboxes} />} />
