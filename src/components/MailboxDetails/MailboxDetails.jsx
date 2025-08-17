@@ -22,6 +22,8 @@ const MailboxDetails = (props) => {
       <div>
         <h3>{selectedBox.name || 'Unnamed Mailbox'}</h3>
         <p><strong>Box Number:</strong> {selectedBox._id}</p>
+        <p><strong>Box Owner:</strong> {selectedBox.boxOwner || 'Unknown'}</p>
+        <p><strong>Box Size:</strong> {selectedBox.boxSize || 'Unknown'}</p>
         <p><strong>Location:</strong> {selectedBox.location || 'No location specified'}</p>
         <p><strong>Description:</strong> {selectedBox.description || 'No description available'}</p>
       </div>

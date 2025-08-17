@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 const MailboxForm = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
     name: '',
+    boxOwner: '',
+    boxSize: 'Small',
     location: '',
     description: ''
   });
@@ -25,6 +27,8 @@ const MailboxForm = ({ onSubmit }) => {
     // Reset form
     setFormData({
       name: '',
+      boxOwner: '',
+      boxSize: 'Small',
       location: '',
       description: ''
     });
@@ -46,6 +50,33 @@ const MailboxForm = ({ onSubmit }) => {
             onChange={handleChange}
             required
           />
+        </div>
+        
+        <div>
+          <label htmlFor="boxOwner">Box Owner:</label>
+          <input
+            type="text"
+            id="boxOwner"
+            name="boxOwner"
+            value={formData.boxOwner}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="boxSize">Box Size:</label>
+          <select
+            id="boxSize"
+            name="boxSize"
+            value={formData.boxSize}
+            onChange={handleChange}
+            required
+          >
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
         </div>
         
         <div>

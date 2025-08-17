@@ -19,6 +19,9 @@ const MailboxList = ({ mailboxes = [] }) => {
             <Link to={`/mailboxes/${mailbox._id}`}>
               Mailbox #{mailbox._id} - {mailbox.name || 'Unnamed Mailbox'}
             </Link>
+            <div>
+              <small>Owner: {mailbox.boxOwner || 'Unknown'} | Size: {mailbox.boxSize || 'Unknown'}</small>
+            </div>
           </li>
         ))}
       </ul>
