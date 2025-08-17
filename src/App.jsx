@@ -10,21 +10,26 @@ import { Route, Routes } from 'react-router-dom';
 
 
 const App = () => {
-  // eslint-disable-next-line no-unused-vars
   const [mailboxes, setMailboxes] = useState([]);
 
-  // eslint-disable-next-line no-unused-vars
   const addBox = (formData) => {
-    setMailboxes(prevMailboxes => [...prevMailboxes, formData]);
+    setMailboxes(prevMailboxes => {
+      const newMailbox = {
+        ...formData,
+        _id: prevMailboxes.length + 1
+      };
+      return [...prevMailboxes, newMailbox];
+    });
   };
 
   return (
     <>
+      <NavBar />
       <Routes>
         <Route path="/" element={<main><h1>Post Office</h1></main>} />
-        <Route path="/mailboxes" element={<MailboxList />} />
-        <Route path="/new-mailbox" element={<MailboxForm />} />
-        <Route path="/mailboxes/:mailboxId" element={<MailboxDetails />} />
+        <Route path="/mailboxes" element={<MailboxList mailboxes={mailboxes} />} />
+        <Route path="/new-mailbox" element={<MailboxForm onSubmit={addBox} />} />
+        <Route path="/mailboxes/:mailboxId" element={<MailboxDetails mailboxes={mailboxes} />} />
       </Routes>
     </>
   );
